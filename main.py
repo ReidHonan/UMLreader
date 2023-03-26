@@ -108,7 +108,6 @@ def matchRelationToClasses(classes, relations):
             relMapAdd = [rel, classin, classout]
             relMap.append(relMapAdd)
         else:
-            print("Relation: " + str(rel))
             relX = int(rel['X'])
             relY = int(rel['Y'])
             relAdd = rel['additional_attributes']
@@ -197,14 +196,17 @@ if len(sys.argv) > 1:
     filename = sys.argv[1]
 classes, relations, relToClasses = parseUMLetino(filename)
 
+print("Classes:")
 for item in classes:
     print(item)
 print()
 
+print("Relations:")
 for item in relations:
     print(item)
 print()
 
+print("Relations mapped to Classes:")
 for mat in relToClasses:
     for item in mat:
         print(item)

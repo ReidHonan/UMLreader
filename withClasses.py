@@ -171,10 +171,12 @@ filename = "Playschool Example 1.uxf"
 if len(sys.argv) > 1:
     filename = sys.argv[1]
 classes, relations = parseUMLetino(filename)
+print("Classes:")
 for item in classes:
     print(item)
 print()
 
+print("Relations:")
 for item in relations:
     print(item)
 print()
